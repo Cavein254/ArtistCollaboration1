@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{% block title %} Tasks Details {% endblock title %}
+{% block content %}
+<h4>{{ task_detail.task_title }}</h4>
+<p4> {{ task_detail.task_description}}</p4>
+<p>{{task_detail.profession_required}}</p>
+<p><small>Expected date {{task_detail.expiry_date}}</small></p>
+<a href="{% url 'edit_task' task.pk %}">+ Edit Task</a>
+{% endblock content %}

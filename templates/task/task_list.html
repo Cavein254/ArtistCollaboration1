@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Tasks Listings {% endblock title %}
+{% block content %}
+<div class="listings">
+    {% for task in tasks %}
+    <h4><a href="{{task.get_absolute_url}}">{{ task.task_title }}</a> </h4>
+    <p4> {{ task.task_description}}</p4>
+    <p><small>Expected date {{task.expiry_date}}</small></p>
+    {% endfor %}
+</div>
+{% endblock content %}
